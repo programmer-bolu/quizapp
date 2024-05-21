@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Document</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
@@ -240,13 +239,20 @@
             margin: auto;
             margin-top: 20px;
             animation: boun;
-            animation-duration: 5s;
+            animation-duration: 7s;
             animation-fill-mode: forwards;
+            animation-iteratiom-count: infinite;
         }
 
         @keyframes boun {
-            100% {
+            0% {
+                transform: scale(1);
+            }
+            50% {
                 transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
             }
         }
 
@@ -260,39 +266,6 @@
         .follow a {
             color: rgb(104, 100, 100);
             margin-top: 5px;
-        }
-
-        .designturn {
-            border: medium solid rgb(83, 84, 159);
-            width: 10px;
-            height: 5px;
-            position: absolute;
-            margin-top: -340px;
-            margin-left: -6px;
-            border-radius: 50%;
-            background-color: rgb(83, 84, 159);
-            animation-duration: 20s;
-            animation-name: turn;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes turn {
-            35% {
-                transform: translateX(347px);
-            }
-
-            40% {
-                transform: translate(347px, -131px);
-            }
-
-            75% {
-                transform: translate(-0px, -131px);
-            }
-
-            100% {
-                transform: translate(-0px, 0px);
-            }
         }
 
         #submitpages {
@@ -430,7 +403,6 @@
                 NEXT</button>
             <button class="sub" onclick="submit()">SUBMIT</button>
             <div class="designbase"></div>
-            <div class="designturn"></div>
         </div>
         <div class="finishpage" id="promptPage" hidden>
             <h1 style="font-family: Arial; font-size: 1.2em; padding-top: 200px;">Are you sure you want to submit</h1>
